@@ -13,7 +13,6 @@
 #import "AudioController.h"
 #import "UIView+Capture.h"
 #import "SettingsManager.h"
-@import Social;
 
 
 @interface MasterViewController () <MasterViewDataSource, MasterViewDelegate>
@@ -28,13 +27,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     //self.index = 0;
     self.flag = NO;
-    
-    MasterView *masterView = (MasterView *)self.view;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    MasterView *masterView = [[MasterView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    masterView.userInteractionEnabled = YES;
     masterView.delegate = self;
     masterView.dataSource = self;
-    //masterView.bezierPath = self.bezierPath;
+    masterView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:masterView];
+    
+    [[masterView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor] setActive:YES];
+    [[masterView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor] setActive:YES];
+    [[masterView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor] setActive:YES];
+    [[masterView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor] setActive:YES];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                          target:self
+                                                                                          action:@selector(saveAndDismiss:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                                           target:self
+                                                                                           action:@selector(nextAction:)];
     
     self.audioController = [AudioController new];
 }
@@ -48,7 +63,7 @@
     return _bezierPath;
 }
 
-- (IBAction)saveAndDismiss:(UIBarButtonItem *)sender {
+- (void)saveAndDismiss:(UIBarButtonItem *)sender {
     CGSize size = CGSizeMake(120 * self.view.frame.size.width/self.view.frame.size.height, 120);
     
     UIImage *image = [self.view captureWithSize:size];
@@ -60,20 +75,21 @@
     }];
 }
 
-- (IBAction)nextAction:(UIBarButtonItem *)sender {
+- (void)nextAction:(UIBarButtonItem *)sender {
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Start again"
                                                                              message:@""
                                                                       preferredStyle:UIAlertControllerStyleActionSheet];
     [alertController setModalPresentationStyle:UIModalPresentationCurrentContext];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     
-    UIAlertAction *startAgainAction = [UIAlertAction actionWithTitle:@"Start again" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
+    UIAlertAction *startAgainAction = [UIAlertAction actionWithTitle:@"Start again"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction *action) {
         self.index = 0;
         self.flag = NO;
         self->_bezierPath = nil;
         
-        MasterView *masterView = (MasterView *)self.view;
+        MasterView *masterView = (MasterView *)self.view.subviews.firstObject;
         //masterView.bezierPath = self.bezierPath;
         [masterView reloadData];
     }];

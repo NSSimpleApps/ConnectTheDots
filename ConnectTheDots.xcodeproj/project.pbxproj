@@ -23,7 +23,6 @@
 		B5BCFDFC1B076C9F006251AD /* MasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BCFDFB1B076C9F006251AD /* MasterView.m */; };
 		B5CC0B571B0B18D100DD8045 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC0B561B0B18D100DD8045 /* AudioController.m */; };
 		B5CC0B5D1B0B244400DD8045 /* capture.aif in Resources */ = {isa = PBXBuildFile; fileRef = B5CC0B541B0B188A00DD8045 /* capture.aif */; };
-		B5CC0B5E1B0B247500DD8045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55E9DF41B0647B000C76F77 /* Main.storyboard */; };
 		B5CC0B5F1B0B247900DD8045 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55E9DF91B0647B000C76F77 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		B55E9DEC1B0647B000C76F77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B55E9DEE1B0647B000C76F77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B55E9DEF1B0647B000C76F77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B55E9DF51B0647B000C76F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B55E9DF71B0647B000C76F77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ConnectTheDots/Images.xcassets; sourceTree = "<group>"; };
 		B55E9DFA1B0647B000C76F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B55E9E101B06498E00C76F77 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				B5CC0B541B0B188A00DD8045 /* capture.aif */,
-				B55E9DF41B0647B000C76F77 /* Main.storyboard */,
 				B55E9DF91B0647B000C76F77 /* LaunchScreen.xib */,
 				B5BB8E181B0756CD00304775 /* figure1.json */,
 				B570E1A01B0B73C700D82AF1 /* figure2.json */,
@@ -223,7 +220,6 @@
 			files = (
 				B570E1A11B0B73C700D82AF1 /* figure2.json in Resources */,
 				B5CC0B5F1B0B247900DD8045 /* LaunchScreen.xib in Resources */,
-				B5CC0B5E1B0B247500DD8045 /* Main.storyboard in Resources */,
 				B5CC0B5D1B0B244400DD8045 /* capture.aif in Resources */,
 				B55E9DF81B0647B000C76F77 /* Images.xcassets in Resources */,
 				B5BB8E191B0756CD00304775 /* figure1.json in Resources */,
@@ -255,14 +251,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B55E9DF41B0647B000C76F77 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55E9DF51B0647B000C76F77 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B55E9DF91B0647B000C76F77 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
