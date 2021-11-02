@@ -30,7 +30,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     //self.index = 0;
     self.flag = NO;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     MasterView *masterView = [[MasterView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     masterView.userInteractionEnabled = YES;
     masterView.delegate = self;

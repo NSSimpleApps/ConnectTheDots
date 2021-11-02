@@ -91,6 +91,7 @@
     masterViewController.delegate = self;
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    nc.modalPresentationStyle = UIModalPresentationFullScreen;
     
     [self presentViewController:nc animated:YES completion:nil];
 }
@@ -104,9 +105,7 @@
 - (void)gameDidFinishWithIndex:(NSInteger)index
                          image:(nullable UIImage *)image
                     bezierPath:(UIBezierPath *)bezierPath {
-    
     if (self.selectedIndexPath != nil) {
-        
         NSString *figure = self.figures[self.selectedIndexPath.row];
         
         [[SettingsManager shared] setIndex:index forKey:figure];

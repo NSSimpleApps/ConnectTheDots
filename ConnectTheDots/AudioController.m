@@ -18,26 +18,21 @@
 @implementation AudioController
 
 - (instancetype)init {
-    
     self = [super init];
     
     if (self) {
-        
         NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"capture"
                                                   withExtension:@"aif"];
-        
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_captureSoundID);
     }
     return self;
 }
 
 - (void)playCaptureSound {
-    
     AudioServicesPlaySystemSound(self.captureSoundID);
 }
 
 - (void)dealloc {
-    
     AudioServicesDisposeSystemSoundID(self.captureSoundID);
 }
 

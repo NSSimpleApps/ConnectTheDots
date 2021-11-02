@@ -15,11 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MasterViewController : UIViewController
 
 @property (assign, nonatomic) NSInteger index;
-
 @property (strong, nonatomic) UIBezierPath *bezierPath;
-
 @property (copy, nonatomic) NSArray<NSValue *> *points;
-
 @property (weak, nonatomic) id<DataTransferProtocol> delegate;
 
 @end

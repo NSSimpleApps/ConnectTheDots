@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,7 +23,7 @@
 		B5BCFDFC1B076C9F006251AD /* MasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BCFDFB1B076C9F006251AD /* MasterView.m */; };
 		B5CC0B571B0B18D100DD8045 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC0B561B0B18D100DD8045 /* AudioController.m */; };
 		B5CC0B5D1B0B244400DD8045 /* capture.aif in Resources */ = {isa = PBXBuildFile; fileRef = B5CC0B541B0B188A00DD8045 /* capture.aif */; };
-		B5CC0B5F1B0B247900DD8045 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55E9DF91B0647B000C76F77 /* LaunchScreen.xib */; };
+		CE93BA1A273157AC004E473E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE93BA19273157AC004E473E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		B55E9DEE1B0647B000C76F77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B55E9DEF1B0647B000C76F77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B55E9DF71B0647B000C76F77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ConnectTheDots/Images.xcassets; sourceTree = "<group>"; };
-		B55E9DFA1B0647B000C76F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B55E9E101B06498E00C76F77 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		B55E9E111B06498E00C76F77 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		B55E9E131B0649FE00C76F77 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		B5CC0B541B0B188A00DD8045 /* capture.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = capture.aif; sourceTree = "<group>"; };
 		B5CC0B551B0B18D100DD8045 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		B5CC0B561B0B18D100DD8045 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		CE93BA19273157AC004E473E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,9 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				B5CC0B541B0B188A00DD8045 /* capture.aif */,
-				B55E9DF91B0647B000C76F77 /* LaunchScreen.xib */,
 				B5BB8E181B0756CD00304775 /* figure1.json */,
 				B570E1A01B0B73C700D82AF1 /* figure2.json */,
+				CE93BA19273157AC004E473E /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 		B55E9DDF1B0647B000C76F77 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = NSSimpleApps;
 				TargetAttributes = {
 					B55E9DE61B0647B000C76F77 = {
@@ -196,8 +196,8 @@
 				};
 			};
 			buildConfigurationList = B55E9DE21B0647B000C76F77 /* Build configuration list for PBXProject "ConnectTheDots" */;
-			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -219,9 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B570E1A11B0B73C700D82AF1 /* figure2.json in Resources */,
-				B5CC0B5F1B0B247900DD8045 /* LaunchScreen.xib in Resources */,
 				B5CC0B5D1B0B244400DD8045 /* capture.aif in Resources */,
 				B55E9DF81B0647B000C76F77 /* Images.xcassets in Resources */,
+				CE93BA1A273157AC004E473E /* LaunchScreen.storyboard in Resources */,
 				B5BB8E191B0756CD00304775 /* figure1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,22 +250,12 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		B55E9DF91B0647B000C76F77 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55E9DFA1B0647B000C76F77 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		B55E9E081B0647B000C76F77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -284,6 +274,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -309,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -339,6 +331,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -357,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,7 +365,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ConnectTheDots/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "NSSimpleApps.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -386,7 +382,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ConnectTheDots/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "NSSimpleApps.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
